@@ -1,0 +1,16 @@
+.a{
+    height: 100vh;
+    display: flex;  /*布局方法*/
+    flex-direction: column;/*垂直布局*/
+    align-items: center;
+    justify-content: space-around;/* 垂直方向散布*/
+}
+image{
+    width: 540rpx; /*图片宽度*/
+    border-radius: 50%;/* 4个角变为圆角形状*/
+}
+text{
+    font-size: 50rpx;
+    color: red;
+
+}
