@@ -6,7 +6,7 @@ page {
 }
 .cates .cates_container {
   /* less中使用calc须注意*/
-  height: calc( 100vh -90rpx);
+  height: calc( 100vh - 90rpx);
   display: flex;
 }
 .cates .cates_container .leftmenu {
