@@ -62,11 +62,27 @@ Page({
 
   },
     //获取分类数据方法
-getCates(){
+ async getCates(){
 
-      request({url:"https://api.zbztb.cn/api/public/v1/categories"})
-      .then(result=>{
-            this.Cates=result.data.message;
+      // request({url:"/categories"})
+      // .then(result=>{
+      //       this.Cates=result.data.message;
+      //       // 吧接口的数据存入到本地存中
+      //       wx.setStorageSync("cates", {time:Date.now(),data:this.Cates});
+      //       //构造左侧的菜单数据
+      //     let leftMenuList=this.Cates.map(v=>v.cat_name);
+      //       //构造右侧的菜单数据
+      //     let rightMenuList=this.Cates[0].children; 
+      //     this.setData({
+      //           leftMenuList,
+      //           rightMenuList
+      //     })
+
+      // })
+      
+      // 1 使用es7的async await来发送请求
+      const result=await request({url:"/categories"});
+            this.Cates=result;
             // 吧接口的数据存入到本地存中
             wx.setStorageSync("cates", {time:Date.now(),data:this.Cates});
             //构造左侧的菜单数据
@@ -78,7 +94,6 @@ getCates(){
                 rightMenuList
           })
 
-      })
     },
     handleItemTap(e){
       /*
