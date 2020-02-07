@@ -1,3 +1,19 @@
+/*
+1 用户上滑页面 滑动条触底 开始加载下一页数据
+  1 找到滚动条触底时间 微信小程序官方开发文档寻找
+  2 判断还有没有下一页数据
+      1 获取到总页数  只有总条数
+        总页数= Math.ceil(总条数/页容量 pagesize)
+              =Math.ceil(23/10)=3
+      2 获取到当前的页码  pagenum
+      3 判断一下当前的页码是否大于等于 总页面
+
+  3 假如没有下一页数据 弹出一个提示
+  4 若有 加载下一个数据源
+    1 单签页码 ++
+    2 重新发送请求
+    3 数据请求回来 要对data中的数组 进行 拼接 而不是全部替换！！！
+  */
 import { request } from "../../request/index.js";
 Page({
 
@@ -42,8 +58,14 @@ Page({
   //获取商品列表数据
   async getGoodsList(){
     const res=await request({url:"/goods/search",data:this.QuerryParams});
+    //获取总条数
+    const total=res.total;
+    //计算总页数
+    this.totalPages=Math.ceil(total/this.QuerryParams.pagesize);
+    // console.log(this.totalPages);
     this.setData({
-      goodsList:res.goods,
+      //拼接了数组
+      goodsList:[...this.data.goodsList,...res.goods],
     })
   },
 
@@ -58,6 +80,21 @@ Page({
       this.setData({
         tabs
       })
+    },
+
+    //页面上滑 滚动条触底
+    onReachBottom(){
+      //1 判断还有没有下一页数据
+        if(this.QuerryParams.pagenum>=this.totalPages){
+        wx.showToast({
+          title: '没有下一页数据'
+          });
+        }else{
+          //有下一页数据
+          // console.log(有下一页数据);
+          this.QuerryParams.pagenum++;
+          this.getGoodsList();
+        }
     }
   
 })
