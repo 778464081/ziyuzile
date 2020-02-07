@@ -75,7 +75,7 @@ Page({
       goodsList:[...this.data.goodsList,...res.goods],
     })
     //关闭下拉刷新的窗口 如果没有调用下拉刷新的窗口 直接关闭也不会报错
-    wx.wx.stopPullDownRefresh(); 
+    wx.stopPullDownRefresh(); 
   },
 
     //标题点击事件 从子组件传递过来
