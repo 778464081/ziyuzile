@@ -1,0 +1,60 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/category/index",
+    "pages/carts/index",
+    "pages/user/index",
+    "pages/search/index",
+    "pages/goods_list/index",
+    "pages/goods_detail/index",
+    "pages/pay/index",
+    "pages/auth/index",
+    "pages/login/index",
+    "pages/order/index"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#eb4450",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "小洪优购",
+    "backgroundColor": "#ffffff",
+    "backgroundTextStyle": "light",
+    "backgroundColorTop": "#ffffff",
+    "backgroundColorBottom": "#ffffff",
+    "enablePullDownRefresh": true,
+    "onReachBottomDistance": 50
+  },
+  "tabBar": {
+    "color": "#999",
+    "selectedColor": "#ff2d4a",
+    "backgroundColor": "#fafafa",
+    "position": "bottom",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/shouye.png",
+        "selectedIconPath": "images/shouye1.png"
+      },
+      {
+        "pagePath": "pages/category/index",
+        "text": "分类",
+        "iconPath": "images/fenlei.png",
+        "selectedIconPath": "images/fenlei1.png"
+      },
+      {
+        "pagePath": "pages/carts/index",
+        "text": "购物车",
+        "iconPath": "images/gouwuche.png",
+        "selectedIconPath": "images/gouwuche1.png"
+      },
+      {
+        "pagePath": "pages/user/index",
+        "text": "我的",
+        "iconPath": "images/wo.png",
+        "selectedIconPath": "images/wo1.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap61.json"
+}
