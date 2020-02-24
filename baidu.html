@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+        #menu{
+
+        }
+        #menu li{
+            list-style: none;
+            float: right;
+            padding:0 10px 0;
+        }
+        #menu li a{
+            color: black;
+            font-size: 15px;
+        }
+        #search{
+
+            position: relative;
+            top: 110px;
+            left: 600px;
+        }
+        .baidu{
+            overflow: hidden;
+            height: 160px;
+            width: 360px;
+            background-image: url("baidu.png") ;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 70% 70%;
+        }
+        #text{
+            float:left;
+            width:60%;
+            height: 40px;
+            border: none;
+            outline: none;
+        }
+        #submit{
+            float: right;
+            width: 20%;
+            height: 45px;
+            border: none;
+            outline: none;
+            background-color: #3385ff;
+        }
+        .s{
+            border: 1px solid blue;
+            width: 500px;
+            height: 45px;
+
+        }
+        .tu1{
+            float:left;
+            background-image: url("maikefen.png");
+            height:45px;
+            width: 10%;
+            cursor: pointer;
+            border: none;
+        }
+        .tu2{
+            float: left;
+            background-image: url("photo.png");
+            height: 30px;
+            width: 10%;
+            margin-top: 8px;
+            background-repeat: no-repeat;
+            background-position: 0px 0px;
+            cursor: pointer;
+            background-size: 60%;
+        }
+
+    </style>
+    <head>
+        <meta charset="UTF-8">
+        <title>百度一下，你就知道</title>
+    </head>
+    <body>
+        <div id="menu">
+            <ul>
+                <li> <a href="#">抗击肺癌</a> </li>
+                <li> <a href="#">新闻</a> </li>
+                <li> <a href="#">hao123</a> </li>
+                <li> <a href="#">地图</a> </li>
+                <li> <a href="#">视频</a> </li>
+                <li> <a href="#">贴吧</a> </li>
+                <li> <a href="#">学术</a> </li>
+                <li> <a href="#">登陆</a> </li>
+                <li> <a href="#">设置</a> </li>
+            </ul>
+        </div>
+        <div id="search" >
+            <div class="baidu"></div>
+            <form action="http://www.baidu.com/s">
+            <div class="s">
+                <input type="text" name="wd" id="text">
+                <div class="tu1"></div>
+                <div class="tu2"></div>
+                <input type="submit" value="百度一下" id="submit">
+            </div>
+            </form>
+        </div>
+    </body>
+</html>
