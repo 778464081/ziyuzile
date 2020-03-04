@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>抖音</title>
+        <style type="text/css">
+            body { margin: 0 ; padding : 0 ; }
+            .container {
+                /* position 采用 absolute 表示相对于 浏览器窗口 或 第一个非static定位的父元素 进行定位 */
+                position: absolute ; /* 一定要注意 .container 的定位方式是 absolute 不是 static */
+                left : 0 ;
+                top : 0 ;
+                width: 100% ;
+                height: 100% ;
+            }
+
+            .video-bg {
+                /* position 采用 absolute 表示相对于 浏览器窗口 或 第一个非static定位的父元素 进行定位 */
+                position: absolute ; /* 当父元素不是 static 定位时，就相对于父元素定位 */
+                left: 0 ;
+                top : 0 ;
+                width: 100% ;
+                height: 100% ;
+                z-index: -250 ;
+            }
+
+            .video-tvc {
+                /* position 采用 absolute 表示相对于 浏览器窗口 或 第一个非static定位的父元素 进行定位 */
+                position: absolute ; /* 当父元素不是 static 定位时，就相对于父元素定位 */
+                left: -10% ;
+                top: 0 ;
+                height: 100% ; /* 只设置视频的高度，因为视频尺寸是固定比例 */
+            }
+
+            .content {
+                /* position 采用 absolute 表示相对于 浏览器窗口 或 第一个非static定位的父元素 进行定位 */
+                position: absolute ; /* 当父元素不是 static 定位时，就相对于父元素定位 */
+                left: 0 ;
+                top : 0 ;
+                width: 100% ;
+                height: 100% ;
+                z-index: 250 ;
+            }
+
+            .btn {
+                width: 22px ; height: 22px ; border: 1px solid grey ;
+                background-size: 22px 22px ;
+            }
+
+            .unmute { background-image: url("unmute.png") ; }
+
+            .mute { background-image: url("mute.png") ; }
+        </style>
+    </head>
+    <body>
+
+        <div class="container">
+            <div class="video-bg">
+                <video src="douyin.mp4" muted autoplay loop class="video-tvc" ></video>
+            </div>
+            <div class="content">
+                <div class="btn unmute"></div>
+            </div>
+        </div>
+
+        <script type="text/javascript" >
+            ( function(){
+                let video = document.querySelector( ".video-tvc" );
+                let btn = document.querySelector( ".btn" );
+
+                let action = function(){
+                    // 如果时静音状态
+                    if( video.muted ) {
+                        video.muted = false ; // 让它不再沉默
+                        btn.classList.remove( "unmute" ); // 为 btn 元素移除 unmute 这个 class name
+                        btn.classList.add( "mute" ); // 为 btn 元素添加 mute 这个 class name
+                    } else {
+                        video.muted = true ; // 让它沉默
+                        btn.classList.remove( "mute" ); // 为 btn 元素移除 mute 这个 class name
+                        btn.classList.add( "unmute" ); // 为 btn 元素添加 unmute 这个 class name
+                    }
+                }
+
+                btn.addEventListener( "click" , action , false );
+            })();
+        </script>
+
+    </body>
+</html>
