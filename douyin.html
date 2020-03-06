@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>抖音</title>
-        <style type="text/css">
-            body { margin: 0 ; padding : 0 ; }
+        <title>Title</title>
+        <style>
+            body{
+                margin: 0;
+                padding: 0;
+            }
             .container {
                 /* position 采用 absolute 表示相对于 浏览器窗口 或 第一个非static定位的父元素 进行定位 */
                 position: absolute ; /* 一定要注意 .container 的定位方式是 absolute 不是 static */
@@ -42,49 +44,207 @@
                 height: 100% ;
                 z-index: 250 ;
             }
-
-            .btn {
-                width: 22px ; height: 22px ; border: 1px solid grey ;
-                background-size: 22px 22px ;
+            .header{
+                height: auto;
             }
-
-            .unmute { background-image: url("unmute.png") ; }
-
-            .mute { background-image: url("mute.png") ; }
+            .header-left{
+                margin-left: 80px;
+                margin-top: 30px;
+                float: left;
+                height: 55px;
+            }
+            .header-right{
+                text-shadow:  0 1px 2px rgba(0,0,0,.4);
+                float: right;
+                margin-right: 150px;
+                font-size: 16px;
+                font-weight: 500;
+            }
+            .header-links{
+                list-style: none;
+                color: #fff;
+            }
+            li{
+                float: left;
+                margin: 30px 5px 0px 5px;
+            }
+            .middle{
+                width: 500px;
+                position: absolute;
+                top: 50%;
+                /*-webkit-transform: translateY(-50%);*/
+                transform: translateY(-50%);
+                margin-top: 50px;
+                right: 150px;
+            }
+            .meihao{
+                float: right;
+                width: 450px;
+                margin-bottom: 50px;
+            }
+            .btnList{
+                float: right;
+                letter-spacing: -4px;
+                font-size: 0;
+            }
+            .tu{
+                display: inline-block;
+                background: transparent;
+                border-radius: 8px;
+                margin-left: 10px;
+                width: 142px;
+                height: 51px;
+                border: 1px solid #000;
+                -webkit-transition: .15s opacity;
+                transition: .15s opacity;
+                -webkit-transition-delay: .15s;
+                transition-delay: .15s;
+                background-size: cover;
+                box-shadow: 1px 1px 7px 2px rgba(0,0,0,.54);
+            }
+            .tu1{
+                background-image: url("apple.png");
+            }
+            .tu2{
+                background-image: url("android_d461475.png");
+            }
+            .tu3{
+                background-image: url("erweima.png");
+                background-size: 50px 50px;
+                background-repeat: no-repeat;
+                float: right;
+                position: relative;
+                width: 50px;
+                height: 50px;
+            }
+            .footer{
+                font-size: 14px;
+                width: 100%;
+                background: transparent;
+                text-align: center;
+                position: absolute;
+                bottom: 10px;
+            }
+            .footer1{
+                color: #fff;
+                text-shadow: 0 1px 2px rgba(0,0,0,.4);
+                margin-bottom: 16px;
+            }
+            .unmute {
+                width: 22px ;
+                height: 22px ;
+                border: 1px solid grey ;
+                background-image: url("unmute.png") ;
+                background-size: 22px;
+            }
+            .mute {
+                width: 22px ;
+                height: 22px ;
+                border: 1px solid grey ;
+                background-image: url("mute.png") ;
+                background-size: 22px;}
         </style>
     </head>
     <body>
-
-        <div class="container">
-            <div class="video-bg">
-                <video src="douyin.mp4" muted autoplay loop class="video-tvc" ></video>
-            </div>
-            <div class="content">
-                <div class="btn unmute"></div>
-            </div>
+    <div class="container">
+        <div class="video-bg">
+            <video src="douyin.mp4" muted autoplay loop class="video-tvc" ></video>
         </div>
+        <div class="content">
+            <div class="header">
+                <div class="header-left">
+                    <img src="douying.png" height="45px">
+                </div>
+                <div class="header-right">
+                    <ul class="header-links">
+                        <li>创作服务平台</li>
+                        <li>开放平台</li>
+                        <li>系列产品</li>
+                        <li>抖音直播</li>
+                        <li>合作入驻</li>
+                        <li>企业合作</li>
+                        <li>联系我们</li>
+                        <li class="btn unmute">
 
-        <script type="text/javascript" >
-            ( function(){
-                let video = document.querySelector( ".video-tvc" );
-                let btn = document.querySelector( ".btn" );
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="middle">
+                <div class="meihao">
+                    <img src="meihao.png" width="100%">
+                </div>
+                <div class="btnList">
+                    <div class="tu tu1"></div>
+                    <div class="tu tu2"></div>
+                    <div class="tu tu3"></div>
+                </div>
+            </div>
+            <footer class="footer">
+                <div class="footer1">
+                    <span>|</span>
+                    <span>音乐</span>
+                    <span>|</span>
+                    <span>用户服务协议</span>
+                    <span>|</span>
+                    <span>隐私政策</span>
+                    <span>|</span>
+                    <span>账号找回</span>
+                    <span>|</span>
+                    <span>广告投放</span>
+                    <span>|</span>
+                    <span>营业执照</span>
+                    <span>|</span>
+                </div>
+                <div class="footer1">
+                    <span>|</span>
+                    <span>2020抖音</span>
+                    <span>|</span>
+                    <span>京ICP备16016397号-3</span>
+                    <span>|</span>
+                    <span>背景微播视界科技有限公司</span>
+                    <span>|</span>
+                    <span>京B2_20170846</span>
+                    <span>|</span>
+                </div>
+                <div class="footer1">
+                    <span>|</span>
+                    <span>中国互联网举报中心</span>
+                    <span>|</span>
+                    <span>| 网络文化许可证-京网文-（2016）2282-264号 | 客户服务热线：400-992-2556 | 违法和不良信息举报：400-140-2108 | 举报邮箱：jubao@douyin.com</span>
+                    <span>|</span>
+                </div>
+                <div class="footer1">
+                    <span>|</span>
+                    <span>   地址 : 北京市海淀区知春路51号4层408 </span>
+                    <span>|</span>
+                    <span>京公网安备 11010802023605号</span>
+                    <span>|</span>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script type="text/javascript" >
+        ( function(){
+            let video = document.querySelector( ".video-tvc" );
+            let btn = document.querySelector( ".btn" );
 
-                let action = function(){
-                    // 如果时静音状态
-                    if( video.muted ) {
-                        video.muted = false ; // 让它不再沉默
-                        btn.classList.remove( "unmute" ); // 为 btn 元素移除 unmute 这个 class name
-                        btn.classList.add( "mute" ); // 为 btn 元素添加 mute 这个 class name
-                    } else {
-                        video.muted = true ; // 让它沉默
-                        btn.classList.remove( "mute" ); // 为 btn 元素移除 mute 这个 class name
-                        btn.classList.add( "unmute" ); // 为 btn 元素添加 unmute 这个 class name
-                    }
+            let action = function(){
+                // 如果时静音状态
+                if( video.muted ) {
+                    video.muted = false ; // 让它不再沉默
+                    btn.classList.remove( "unmute" ); // 为 btn 元素移除 unmute 这个 class name
+                    btn.classList.add( "mute" ); // 为 btn 元素添加 mute 这个 class name
+                } else {
+                    video.muted = true ; // 让它沉默
+                    btn.classList.remove( "mute" ); // 为 btn 元素移除 mute 这个 class name
+                    btn.classList.add( "unmute" ); // 为 btn 元素添加 unmute 这个 class name
                 }
+            }
 
-                btn.addEventListener( "click" , action , false );
-            })();
-        </script>
+            btn.addEventListener( "click" , action , false );
+        })();
+    </script>
 
     </body>
 </html>
