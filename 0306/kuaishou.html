@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+    </head>
+    <style type="text/css">
+        body{
+            margin: 0;
+            padding: 0;
+            background-image: url("1.jpg");
+        }
+        a{
+            text-decoration: none;
+            font-size: 14px;
+            height: 26px;
+        }
+        .wrapper{
+            width: 80%;
+            height: 80px;
+            margin: 0 auto;
+            background-color: hsla(0,0%,100%,.3);
+        }
+        .first{
+            width: 80px;
+            height: 40px;
+            line-height: 40px;
+            float: right;
+        }
+        ul{
+            list-style: none;
+        }
+        .list{
+            padding: 10px 0 0;
+        }
+        li{
+            list-style: none;
+
+        }
+        .second{
+            margin-top: -15px;
+            background-color: hsla(0,0%,100%,.3);
+            text-align: center;
+            display: none;
+            position: relative;
+        }
+        .first:hover .second{
+            display: block;
+        }
+        .third{
+            display: none;
+            position: absolute;
+            right: 100%;
+            top: 30px;
+            width: 100px;
+            height: 100px;
+            background-color: #1a85d7;
+            margin-right: 5px;
+            overflow: hidden;
+        }
+        .sub:hover .third{
+            display:block;
+        }
+    </style>
+    <body>
+    <div class="wrapper">
+        <div class="first">
+            <a href="#">快手直播</a>
+            <ul class="list">
+                <li class="second">
+                    <a href="#">关于我们</a>
+                </li>
+                <li class="second">
+                    <a href="#">为之奈何</a>
+                </li>
+                <div class="third">
+                    aaaaaaaaaaaaaaaaaaaa
+                </div>
+            </ul>
+        </div>
+        <div class="first">
+            <a href="#">快手直播</a>
+            <ul class="list">
+                <li class="second">
+                    <a href="#">关于我们</a>
+                </li>
+                <li class="second sub">
+                    <a href="#">为之奈何</a>
+                    <div class="third">
+                    aaaaaaaaaaaaaaaaaaaa
+                </div>
+                </li>
+
+            </ul>
+        </div>
+        <div class="first">
+            <a href="#">快手直播</a>
+            <ul class="list">
+                <li class="second">
+                    <a href="#">关于我们</a>
+                </li>
+                <li class="second">
+                    <a href="#">为之奈何</a>
+                </li>
+                <div class="third">
+                    aaaaaaaaaaaaaaaaaaaa
+                </div>
+            </ul>
+        </div>
+    </body>
+</html>
