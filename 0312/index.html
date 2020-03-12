@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <style>
+            body{
+                padding: 0;
+                margin: 0;
+                background-color: #f5f5f5; ;
+            }
+            a{
+                text-decoration: none;
+                color: black;
+            }
+            .content{
+
+                width: 1200px;
+                height: 100px;
+                margin: 0 auto;
+            }
+            .logo{
+                float: left;
+                width: 100px;
+                height: 100px;
+                background-color: red;
+
+            }
+            .list{
+                float: left;
+                width: 850px;
+                height: 100px;
+                line-height: 100px;
+                text-align: center;
+
+            }
+            .search{
+                float: right;
+                width:250px;
+                height: 100px;
+                background-color: yellow;
+            }
+            .goodlist{
+                display: inline-block;
+                margin-left: 15px;
+            }
+            .children{
+                overflow: hidden;
+                position: absolute;
+                top: 100px;
+                left: 0;
+                width: 100%;
+                height: 0px;
+                background-color: #fff;
+                transition: height 0.5s;
+            }
+            .goodlist:hover .children{
+                height:270px;
+            }
+            .topline{
+                position: absolute;
+                top: -1px;
+                left: 0;
+                width: 100%;
+                border: 1px solid white;
+            }
+            .goods{
+                display: inline-block;
+                height: 190px;
+                width: 200px;
+                text-align: center;
+                text-decoration: none;
+                line-height: 20px;
+                margin: 40px 0;
+            }
+            .photo{
+                background-image: url("mi10.png");
+                background-size: cover;
+                width: 160px;
+                height: 110px;
+                margin: 0 auto;
+            }
+            .text{
+                font-size: 12px;
+                margin-top: 15px;
+            }
+            .price{
+                color: red;
+                font-size: 12px;
+                margin:0 ;
+            }
+            .sx{
+                display: inline-block;
+                width: 0;
+                height: 110px;
+                border-width: 0px 1px 0px 0px;
+                border-color: rgba(212,212,212,0.78);
+                border-style: solid;
+                margin-bottom: 40px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="content">
+            <div class="logo"></div>
+            <div class="list">
+                <div class="goodlist">
+                    <a href="" class="dididi">小米手机</a>
+                    <div class="children">
+                        <div class="topline"></div>
+                        <a class="goods">
+                            <div href="#" class="photo"></div>
+                            <div class="text">小米10 Pro</div>
+                            <p class="price">4999元起</p>
+                        </a>
+                        <div class="sx"></div>
+
+                        <a class="goods">
+                            <div href="#" class="photo"></div>
+                            <div class="text">小米10 Pro</div>
+                            <div class="price">4999元起</div>
+                        </a>
+                        <div class="sx"></div>
+
+                        <a class="goods">
+                            <div href="#" class="photo"></div>
+                            <div class="text">小米10 Pro</div>
+                            <div class="price">4999元起</div>
+                        </a>
+                        <div class="sx"></div>
+
+                        <a class="goods">
+                            <div href="#" class="photo"></div>
+                            <div class="text">小米10 Pro</div>
+                            <div class="price">4999元起</div>
+                        </a>
+                        <div class="sx"></div>
+
+                        <a class="goods">
+                            <div href="#" class="photo"></div>
+                            <div class="text">小米10 Pro</div>
+                            <div class="price">4999元起</div>
+                        </a>
+                        <div class="sx"></div>
+                    </div>
+                </div>
+                <div class="goodlist">
+                    <a href="">Redmi红米</a>
+                </div>
+                <div class="goodlist">
+                    <a href="">电视</a>
+                </div>
+                <div class="goodlist">
+                    <a href="">笔记本</a>
+                </div><div class="goodlist">
+                <a href="">家电</a>
+                 </div>
+                <div class="goodlist">
+                <a href="">路由器</a>
+                 </div>
+                <div class="goodlist">
+                    <a href="">智能硬件</a>
+                </div>
+                <div class="goodlist">
+                    <a href="">服务</a>
+                </div>
+                <div class="goodlist">
+                    <a href="">社区</a>
+                </div>
+            </div>
+            <div class="search"></div>
+        </div>
+    </body>
+</html>
