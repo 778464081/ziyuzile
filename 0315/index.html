@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>0315</title>
+        <link rel="stylesheet" href="../font-awesome-4.7.0/css/font-awesome.css">
+        <style>
+            body{
+                padding: 0;
+                margin: 0;
+                background-color: #f5f5f5;
+            }
+            .head{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+            }
+            .content{
+                width: 1220px;
+                height: 100px;
+                margin: 0 auto;
+            }
+            .logo{
+                float: left;
+                width: 62px;
+                margin-top: 22px;
+                background-color: #ff6700;
+            }
+            .logo-home{
+                display: block;
+                width: 55px;
+                height: 55px;
+               background-image: url("mi-logo.png");
+                background-position: 0;
+                background-size: cover;
+            }
+            .logo-home:hover{
+                background-image: url("mi-home.png");
+            }
+            .list{
+                float: left;
+                width: 850px;
+            }
+            .list-ul{
+                list-style-type: none;
+                font-size: 16px;
+                height: 88px;
+                padding: 12px 0 0 30px;
+                margin: 0;
+                float: left;
+            }
+            .list-li{
+                list-style-type: none;
+                display: inline-block;
+                padding: 26px 10px 38px;
+            }
+            a{
+                text-decoration: none;
+                color: black;
+            }
+            .white{
+                display: inline-block;
+                list-style-type: none;
+                float: left;
+                width: 127px;
+                padding-right: 15px;
+                height: 88px;
+            }
+            .children ul{
+                list-style-type: none;
+            }
+            .children{
+                position: absolute;
+                display: inline-block;
+                top: 100px;
+                left: 0;
+                width: 100%;
+                height: 0;
+                overflow: hidden;
+                background-color: #ffffff;
+                transition: height 0.5s 0.5s;
+            }
+            .children-ul{
+                text-align: center;
+            }
+            .list-li:hover .children{
+                height: 270px;
+            }
+            .top{
+                border: 1px solid white;
+                position: absolute;
+                top: -1px;
+                left: 0;
+                width: 100%;
+            }
+            .goods{
+                /*display: inline-block;*/
+                /*width: 200px;*/
+                /*height: 190px;*/
+                /*text-decoration: none;*/
+                /*text-align: center;*/
+                /*margin: 40px 0;*/
+            }
+            .children-li{
+                display: inline-block;
+                width: 200px;
+                height: 190px;
+                text-decoration: none;
+                text-align: center;
+                margin: 40px 0;
+            }
+            .img{
+                display: block;
+                background-image: url("mi10.png");
+                width: 160px;
+                height: 110px;
+                margin: 0 auto;
+                background-size: cover;
+            }
+            .text{
+
+                font-size: 12px;
+                margin:15px 0 0 0;
+            }
+            .price{
+                color: red;
+                font-size: 12px;
+                margin:0 ;
+            }
+            .sx{
+                border-color:rgba(212,212,212,0.78);
+                border-width: 0 1px 0 0;
+                border-style:solid;
+                height: 110px;
+                display: inline-block;
+                margin-bottom:40px ;
+                width: 0;
+            }
+            .search{
+                float: right;
+                width: 296px;
+                margin-top: 25px;
+                height: 75px;
+            }
+            .search-form{
+                position: relative;
+                width: 296px;
+                height: 50px;
+            }
+            .search-text{
+                position: absolute;
+                top: 0;
+                border: 1px solid #e0e0e0;
+                right: 51px;
+                width: 223px;
+                height: 48px;
+                padding: 0 10px;
+                font-size: 14px;
+                line-height: 48px;
+                outline: 0;
+            }
+            .search-btn{
+                position: absolute;
+                right: 0;
+                z-index: 2;
+                width: 52px;
+                height: 48px;
+                font-size: 24px;
+                line-height: 24px;
+                background: #fff;
+                color: #616161;
+                border: 1px solid #e0e0e0;
+                outline: 0;
+            }
+            .aa{
+                position: relative;
+                top: 12px;
+                left: 266px;
+                z-index: 100;
+
+            }
+            .textOne{
+                position: absolute;
+                top: 14px;
+                right: 62px;
+                text-align: right;
+            }
+            .textOne a{
+                display: inline-block;
+                margin-left: 5px;
+                padding: 0 5px;
+                font-size: 12px;
+                background: #eee;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="head">
+            <div class="content">
+                <div class="logo">
+                    <a href="" class="logo-home"></a>
+                </div>
+                <div class="list">
+                    <ul class="list-ul">
+                        <li class="white"></li>
+                        <li class="list-li">
+                            <a href="#">小米手机</a>
+                            <div class="children">
+                                <!--   顶部线条-->
+                                <div class="top"></div>
+                                <ul class="children-ul">
+                                    <li class="children-li">
+                                          <!--      物品-->
+                                        <div class="goods">
+                                            <a href="" class="img"></a>
+                                            <p class="text">小米10 Pro</p>
+                                            <p class="price">4999起</p>
+                                        </div>
+                                    </li>
+                                    <!-- 竖线-->
+                                    <div class="sx"></div>
+
+                                    <li class="children-li">
+                                        <!--      物品-->
+                                        <div class="goods">
+                                            <a href="" class="img"></a>
+                                            <p class="text">小米10 Pro</p>
+                                            <p class="price">4999起</p>
+                                        </div>
+                                    </li>
+                                    <!-- 竖线-->
+                                    <div class="sx"></div>
+
+                                    <li class="children-li">
+                                        <!--      物品-->
+                                        <div class="goods">
+                                            <a href="" class="img"></a>
+                                            <p class="text">小米10 Pro</p>
+                                            <p class="price">4999起</p>
+                                        </div>
+                                    </li>
+                                    <!-- 竖线-->
+                                    <div class="sx"></div>
+
+                                    <li class="children-li">
+                                        <!--      物品-->
+                                        <div class="goods">
+                                            <a href="" class="img"></a>
+                                            <p class="text">小米10 Pro</p>
+                                            <p class="price">4999起</p>
+                                        </div>
+                                    </li>
+                                    <!-- 竖线-->
+                                    <div class="sx"></div>
+
+                                    <li class="children-li">
+                                        <!--      物品-->
+                                        <div class="goods">
+                                            <a href="" class="img"></a>
+                                            <p class="text">小米10 Pro</p>
+                                            <p class="price">4999起</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="list-li">Redmi红米</li>
+                        <li class="list-li">电视</li>
+                        <li class="list-li">笔记本</li>
+                        <li class="list-li">家电</li>
+                        <li class="list-li">路由器</li>
+                        <li class="list-li">智能硬件</li>
+                        <li class="list-li">服务</li>
+                        <li class="list-li">社区</li>
+                    </ul>
+                </div>
+                <div class="search">
+                    <form class="search-form" action="//search.mi.com/search">
+                        <input type="search" id="search" name="keyword" class="search-text">
+                        <input type="submit" class="fa fa-search search-btn" value="">
+                        <i class="fa fa-search aa"></i>
+                        <div class="textOne">
+                            <a href="">小米9 Pro 5G</a>
+                            <a href="">Redmi Note 8</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    <scrip>
+
+    </scrip>
+    </body>
+</html>
