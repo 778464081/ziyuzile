@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>随机</title>
+
+        <style type="text/css">
+            .wrapper {
+                position: absolute ;
+                left: 50% ;
+                top : 50% ;
+                width: 600px ;
+                margin-left: -300px ;
+                height:300px ;
+                margin-top : -300px ;
+                background-color: #1e9fff ;
+                user-select: none ;
+            }
+
+            h3 { height: 100px ; text-align: center ; font-size: 80px ; }
+            /* 借助于 伪类 选择 同一个父元素中的所有 h3 中的第一个 */
+            h3:first-child { margin-top: 50px ; margin-bottom: 0 ;  }
+            /* 借助于 伪类 选择 同一个父元素中的所有 h3 中的最后一个 */
+            h3:last-child { margin-top: 0 ; }
+        </style>
+
+    </head>
+    <body>
+
+        <div class="wrapper">
+            <h3>第一组</h3>
+            <h3>张君宝</h3>
+        </div>
+
+        <script type="text/javascript" >
+
+                // 获取 .wrapper 元素
+                let w = document.querySelector( ".wrapper" );
+                // 获取 第一个 h3
+                let first = document.querySelector( "h3:first-child" );
+                // 获取 最后一个 h3
+                let last = document.querySelector( "h3:last-child" );
+
+                // 在 JavaScript 中可以通过 [ ] 形式来声明数组
+                let array = [
+                                    [ "张君宝" , "张三丰" ] ,
+                                    [ "宋远桥" , "张翠山" ] ,
+                                    [ "张无忌" , "赵敏" ]
+                                ] ;
+
+                let rand = function( length ){
+                    let rand = Math.random(); // 产生一个 [ 0 , 1 ) 之间的数字
+                    console.log( rand );
+                    let index = rand * length ; // 结果一定是小于 n 的数字
+                    console.log( index );
+                    index = index | 0 ;
+                    console.log( index );
+                    return index ;
+                }
+
+                //  声明函数
+                let action = function(){
+                    let n = array.length ; // 获得外部数组元素个数
+                    console.log( n );
+
+                    let groupIndex = rand( n ); // 根据数组长度随机产生一个索引
+                    let group = array[ groupIndex ]; // 从数组中获取元素 ( 获取到一个小数组 )
+                    console.log( group );
+
+                    let m = group.length ;
+                    // 根据 获取到的小数组的长度 随机产生一个 姓名对应的索引
+                    let nameIndex = rand( m  );
+                    let name = group[ nameIndex ];
+                    console.log( name );
+
+                    first.innerHTML = "第" + ( groupIndex + 1 ) + "组" ;
+                    last.innerHTML = name ;
+                }
+
+                // 为 .wrapper 元素绑定 双击事件 ( dblclick ) 对应的 处理函数 ( 监听器 )
+                w.addEventListener( "dblclick" , action , false );
+
+
+        </script>
+
+    </body>
+</html>
