@@ -1,0 +1,92 @@
+@charset "UTF-8" ;
+
+.boundary { height: 1px ; }
+
+/* 设置所有按钮的公共样式 */
+.btn {
+    display: inline-block; /* 使元素成为 内联块 ( 行内块 ) */
+    height: 38px;
+    line-height: 38px;
+    padding: 0 18px ; /* 设置元素内边距，先上下 后左右 */
+    background-color: #009688;
+    color: #fff;
+    white-space: nowrap ; /* 文本不会换行，文本会在在同一行上继续，直到遇到 <br> 标签为止 */
+    text-align: center;
+    font-size: 14px;
+    border: none; /* 取消边框 */
+    border-radius: 2px;
+    cursor: pointer; /* 当鼠标悬浮到元素上时显式 "手势"光标( 像超链接上的一样 ) */
+    outline: none ; /* 取消轮廓 */
+}
+
+
+.btn:hover {
+    background-color: #00b1a2;
+}
+
+/* 设置 原生按钮 所特有的样式 */
+.btn-primary {
+    border: 1px solid #C9C9C9;
+    background-color: #fff;
+    color: #555;
+}
+
+.btn-primary:hover {
+    border-color: #009688;
+    background-color: #fff;
+    color: #333;
+    transition: all 500ms ;
+}
+
+/* 设置 禁用按钮 所特有的样式 */
+.btn-disabled , /* 使用逗号隔开，逗号之前的选择器 和 逗号之后的选择器 是一个小组的 */
+.btn-disabled:hover {
+    border: 1px solid #e6e6e6;
+    background-color: #FBFBFB;
+    color: #C9C9C9;
+    cursor: not-allowed; /* 设置光标的样式 */
+    opacity: 1;
+}
+
+.btn-lg {
+    height: 44px;
+    line-height: 44px;
+    padding: 0 25px;
+    font-size: 16px;
+}
+
+.btn-sm {
+    height: 30px;
+    line-height: 30px;
+    padding: 0 10px;
+    font-size: 12px;
+}
+
+.btn-xs {
+    height: 22px;
+    line-height: 22px;
+    padding: 0 5px;
+    font-size: 12px;
+}
+
+.btn-group {
+    font-size: 0 ;
+}
+
+/* 使用 【后代选择器】选择 【按钮组】 内的 【按钮】 */
+.btn-group .btn {
+    margin-right: 1px ;
+    border-radius: 0 ;
+}
+
+/* 【:first-child】 是伪类选择器，表示 当 .btn 是 其父元素中的第一个子元素时 */
+.btn-group .btn:first-child {
+    border-top-left-radius: 5px ;
+    border-bottom-left-radius: 5px ;
+}
+
+/* 【:last-child】 是伪类选择器，表示 当 .btn 是 其父元素中的最后一个子元素时 */
+.btn-group .btn:last-child {
+    border-top-right-radius: 5px ;
+    border-bottom-right-radius: 5px ;
+}

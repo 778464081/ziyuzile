@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>0319javascript</title>
+        <style>
+            .wrapper{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                margin-left: -300px ;
+                margin-top : -300px ;
+                width: 600px;
+                height: 300px;
+                background-color: #1a85d7;
+                text-align: center;
+            }
+            h3 { height: 100px ;
+                text-align: center ;
+                font-size: 80px ;
+            }
+            .first{
+                margin-top: 50px ; margin-bottom: 0 ;
+
+            }
+            .last{
+                margin-top: 0 ;
+
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrapper">
+            <h3 class="first">第一组</h3>
+            <h3 class="last">东方月初</h3>
+        </div>
+        <script type="text/javascript">
+            let w = document.querySelector('.wrapper');
+            let first = document.querySelector('.first');
+            let last = document.querySelector('.last');
+
+            let array = [
+                [ "A" , "B" ] ,
+                [ "C" , "D" ] ,
+                [ "E" , "F" ]
+            ] ;
+
+            let rand = function (length) {
+                let x = Math.random();  //在0-1随机产生一个数
+                let index = x * length;
+                rand = rand | 0;
+                return rand;
+            }
+
+            let action = function () {
+                let n = array.length;
+                let groupIndex = rand(n);
+                first.innerHTML = '第' + (groupIndex+1) + '组';
+
+                let  group = array[groupIndex];
+                let m = group.length;
+                let nameIndex = rand(m);
+                let name = group[nameIndex];
+                last.innerHTML = name;
+            }
+
+            w.addEventListener('dblclick',action,false);
+        </script>
+    </body>
+</html>
