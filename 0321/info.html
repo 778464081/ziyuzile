@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>info</title>
+        <link rel="stylesheet" href="info.css">
+        <style>
+
+        </style>
+    </head>
+    <body>
+        <fieldset class="this">
+            <legend>这是个表单</legend>
+        </fieldset>
+        <form action="">
+            <div class="form-item">
+                <label class="lab">单行输入框</label>
+                <div class="input-block">
+                        <input type="text" name="title" autocomplete="off" placeholder="请输入标题" class="input">
+                </div>
+            </div>
+            <div class="form-item">
+                <div class="inline">
+                    <label class="lab">验证手机</label>
+                    <div class="input-inline">
+                        <input type="tel" name="phone" autocomplete="off" class="input">
+                    </div>
+                </div>
+                <div class="inline">
+                    <label class="lab">验证手机</label>
+                    <div class="input-inline">
+                        <input type="tel" name="phone" autocomplete="off" class="input">
+                    </div>
+                </div>
+            </div>
+            <div class="form-item">
+                <div class="inline">
+                    <label class="lab">多规则验证</label>
+                    <div class="input-inline">
+                        <input type="text" class="input">
+                    </div>
+                </div>
+                <div class="inline">
+                    <label class="lab">验证日期</label>
+                    <div class="input-inline">
+                        <input type="text" placeholder="yyyy-MM-dd" class="input">
+                    </div>
+                </div>
+                <div class="inline">
+                    <label class="lab">链接验证</label>
+                    <div class="input-inline">
+                        <input type="text" class="input">
+                    </div>
+                </div>
+            </div>
+            <div class="form-item">
+                <label class="lab">自定义验证</label>
+                <div class="inline">
+                    <input type="password" class="input">
+                </div>
+                <div class="textout">请填写6到12位密码</div>
+            </div>
+            <div class="form-item">
+                <div class="inline">
+                    <label class="lab">范围</label>
+                    <div class="input-inline" style="width: 100px">
+                        <input type="text" placeholder="¥" class="input">
+                    </div>
+                    <div class="mid">-</div>
+                    <div class="input-inline" style="width: 100px">
+                        <input type="text" placeholder="¥" class="input">
+                    </div>
+                </div>
+
+            </div>
+            <div class="form-item">
+                <label class="lab">单行选择器</label>
+                <div class="input-block">
+                    <select  class="input">
+                        <option value="0">写作</option>
+                        <option value="1">阅读</option>
+                        <option value="2">游戏</option>
+                        <option value="3">音乐</option>
+                        <option value="4">旅游</option>
+                    </select>
+                </div>
+            </div>
+        </form>
+    </body>
+</html>
