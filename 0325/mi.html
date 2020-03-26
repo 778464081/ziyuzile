@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <style>
+            body{
+                padding: 0;
+                margin: 0;
+            }
+            .h_panel{
+                width: 1130px;
+                margin: 0 auto;
+            }
+            .h_logo{
+                width: 280px;
+                height: 98px;
+                background: url("https://account.xiaomi.com/static/res/7f6f2f5/account-static/respassport/acc-2014/img/mistore_logo.png")
+                no-repeat;
+            }
+            .logo_panel{
+                background-image:url("https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/12c02030ee73caa35a19be59c5b1ec78.jpg");
+                width: 100%;
+                height: 558px;
+                position: absolute;
+                top: 98px;
+                left: 0;
+                background-repeat: no-repeat;
+                background-position: top center;
+                z-index: 1;
+            }
+            .logo_panel a{
+                display: block;
+                height: 558px;
+                text-indent: -9999em;
+            }
+            .wrap{
+                position: relative;
+                width: 100%;
+            }
+            .layout_panel{
+                padding-top: 20px;
+                width: 1130px;
+                margin: 0 auto;
+            }
+            .layout{
+                width: 410px;
+                min-height: 556px;
+                font-size: 14px;
+                z-index: 4;
+                background-color: #fff;
+                max-width: 854px;
+                margin-left: 720px;
+                position: relative;
+            }
+            .nav_tabs_panel{
+                display: block;
+                padding: 27px 0 24px;
+                text-align: center;
+                font-size: 24px;
+
+            }
+            .nav_tabs_panel a{
+                text-decoration: none;
+                color: #f56600;
+            }
+            .line{
+                width: 1px;
+                height: 24px;
+                margin: 0 35px 0 42px;
+                border: 1px solid #e0e0e0;
+            }
+            .form_table{
+                width: 350px;
+                margin: 20px auto;
+            }
+            .in{
+
+                width: 350px;
+                border: 1px solid #e0e0e0;
+                margin-bottom: 14px;
+            }
+            .in .inp{
+                width: 306px;
+                flex-grow: 1;
+                height: 22px;
+                line-height: 22px;
+                padding: 13px 16px 13px 14px;
+                display: block;
+                border:0 none;
+                outline:none;
+            }
+            .btn{
+                margin-top: 30px;
+                width: 350px;
+            }
+            .btn input{
+                background-color: #ff6700;
+                width: 100%;
+                height: 50px;
+                line-height: 50px;
+                display: block;
+                margin-bottom: 14px;
+                text-align: center;
+                font-size: 14px;
+                color: #fff;
+                cursor: pointer;
+                outline: none;
+                border: none;
+            }
+            .other_panel{
+                margin-top: -5px;
+            }
+            .sp{
+                float: left;
+            }
+            .zhuce{
+                margin-bottom: 30px;
+                font-size: 14px;
+                cursor: pointer;
+                color: #ff6700;
+                text-decoration: none;
+            }
+            .sp1{
+                float: right;
+            }
+            .sp1 a{
+                margin-bottom: 30px;
+                font-size: 14px;
+                cursor: pointer;
+                color: #999;
+                text-decoration: none;
+            }
+            .sp3{
+                display: block;
+                padding-top: 150px;
+            }
+            .oth_type_list{
+                border: 0;
+                margin: 0 auto;
+                text-align: center;
+                border-top: 1px solid #e0e0e0;
+            }
+            legend{
+                font-size: 14px;
+                color: #bbb;
+                margin: 0 auto;
+                text-align: center;
+            }
+            .photo{
+                padding-top: 5px;
+                text-align: center;
+            }
+            .photo a{
+                margin: 0 17px;
+                width: 30px;
+                height: 30px;
+                display: inline-block;
+            }
+            .first{
+                background-image: url("qq.png");
+                background-size: 100%;
+                background-position: 0;
+                background-repeat: no-repeat;
+            }
+            .second{
+                background-image: url("wechat.png");
+                background-size: 100%;
+                background-position: 0;
+                background-repeat: no-repeat;
+            }
+            .third{
+                background-image: url("微博.png");
+                background-size: 100%;
+                background-position: 0;
+                background-repeat: no-repeat;
+            }
+            .fourth{
+                background-image: url("支付宝.png");
+                background-size: 100%;
+                background-position: 0;
+                background-repeat: no-repeat;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="h_panel">
+            <div class="h_logo"></div>
+        </div>
+        <div class="logo_panel">
+            <a href=""></a>
+        </div>
+        <div class="wrap">
+            <div class="layout_panel">
+                <div class="layout">
+                    <div class="nav_tabs_panel">
+                        <a href="">账号登录</a>
+                        <span class="line"></span>
+                        <a href="">扫码登录</a>
+                    </div>
+                    <div class="form_table">
+                        <div class="in">
+                            <input class="inp" type="text" placeholder="邮箱/手机号码/小米ID">
+                        </div>
+                        <div class="in">
+                            <input class="inp" type="password" placeholder="密码">
+                        </div>
+                        <div class="btn">
+                            <input type="button" value="登录">
+                        </div>
+                        <div class="other_panel">
+                            <div class="sp">
+                                <a class="zhuce" href="">手机短信登录/注册</a>
+                            </div>
+                            <div class="sp1">
+                                <a href="">立即注册</a>
+                                <span>|</span>
+                                <a href="">忘记密码？</a>
+                            </div>
+                            <div class="sp3">
+                                <fieldset class="oth_type_list">
+                                    <legend>其他登录方式</legend>
+                                </fieldset>
+                                <div class="photo">
+                                    <a class="first" href=""></a>
+                                    <a class="second" href=""></a>
+                                    <a class="third" href=""></a>
+                                    <a class="fourth" href=""></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
